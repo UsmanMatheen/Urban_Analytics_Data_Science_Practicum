@@ -1,0 +1,32 @@
+Project Code File Overview and Sequence Guide
+
+This guide explains the purpose and processing sequence of the various code files used in this project.
+
+File 1: Data_Merge.py
+This script merges odometer datasets collected from different years into a single, consolidated dataset.
+
+File 2: MPG_API.py
+This script retrieves Miles Per Gallon (MPG) values for vehicles using the NINJA API. MPG values are fetched based on vehicle model names and manufacturing years.
+
+File 3: Model_MPG_Matching.py
+Due to differences between model names in the original odometer dataset and those recognized by the NINJA API, this script maps and matches MPG values to the correct model names and years in our dataset.
+
+File 4: Data_Merge_With_MPG.py
+This script integrates the MPG values into the merged odometer dataset by aligning on model name and manufacturing year.
+
+File 5: Fuel_Used_Column_Addition.py
+This script calculates and adds a fuel_used column by dividing each vehicle’s VMT by its corresponding MPG value.
+
+File 6: Fuel_Type_Column_Addition.py
+This script adds a fuel_type column to the dataset by retrieving fuel type information from the NINJA API.
+
+File 7: Blkgrp_And_Demographics_Data_Addition.py
+This script enriches the dataset with block group (blkgrp) and demographic data. A 9-digit ZIP code is used to establish a one-to-one match with census data, which is then used to append demographic information.
+
+File 8: Emission_Column_Addition.py
+This script calculates vehicle emissions using formulas from the EPA website.
+
+- Vehicles labeled as “Flexible Fuel Vehicle (FFV)” are treated as using Ethanol (E85).
+
+- Vehicles labeled as “Electric” are assigned null emission values due to the dual use of electricity and traditional fuels,    making emissions calculations inaccurate.
+

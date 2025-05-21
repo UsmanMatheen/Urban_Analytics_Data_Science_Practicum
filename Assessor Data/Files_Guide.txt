@@ -1,0 +1,23 @@
+Project Code File Overview and Sequence Guide
+
+This guide explains the purpose and processing sequence of the various code files used in this project.
+
+File 1: Step1-cook_county_same_dtype.ipynb
+This notebook contains code that standardizes column data types in the Cook County Assessor’s parcel dataset to ensure consistency for accurate filtering, joining, and future integration with other datasets in the urban analytics pipeline.
+
+File 2: Step2-City_owned_land.ipynb
+This code of this file cleans and filters the City-Owned Land Inventory from the Chicago Data Portal to isolate parcels actively owned by the city and available for potential redevelopment or acquisition.
+
+File 3: Step3-Parcels_no_improvement.ipynb
+This identifies Cook County parcels lacking physical improvements, such as buildings or renovations, to flag underutilized land suitable for redevelopment, investment, or inclusion in zoning overlays.
+
+File 4: Step4-CookCounty(Chicago)VacantParcels.ipynb
+This file integrates cleaned datasets on city-owned land, unimproved parcels, and zoning overlays to identify and map vacant parcels within Chicago’s Connected Communities zoning boundaries for policy and development prioritization.
+
+File 5: BlockGroups_CookCounty&Chicago.ipynb
+This notebook code extracts and visualizes 2024 U.S. Census block groups for Cook County and the City of Chicago, enabling spatial joins with parcel data for demographic aggregation and equity-focused planning.
+
+File 6: CTA_Busstops_Stations.ipynb
+It processes and visualizes CTA and Metra transit infrastructure to support analysis of public transit access and overlay with zoning and parcel data for transit-oriented development initiatives.
+
+
